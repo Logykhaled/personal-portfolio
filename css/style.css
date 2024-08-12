@@ -612,7 +612,8 @@ h3.hello{
 
 @media(max-width: 1199.98px){
     .home-info .hello{
-       margin-top: 180px;
+       padding-top: 650px;
+     
     }
     .aside{
         left: -275px;
@@ -657,9 +658,13 @@ h3.hello{
      .home .row .home-img::after{
         bottom:-40px;
         right: -40px;
+        
      }
      .home .row .home-img img{
         width: 200px;
+     }
+     .home-img{
+        margin-bottom: 50px;
      }
 }
 @media (max-width: 575.98px) {
