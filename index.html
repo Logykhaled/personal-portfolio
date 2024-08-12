@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img\portfolio.png">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -44,20 +45,20 @@
         <!--**********nav list start ******* -->
         <ul class="navgation">
           <li>
-            <a href="" class="active">
-              <i class="fa fa-home" aria-hidden="true"></i> Home</a
+            <a href="#home" class="active">
+              <i class="fa fa-home" aria-hidden="true" ></i> Home</a
             >
           </li>
           <li>
-            <a href=""><i class="fa fa-user" aria-hidden="true"></i> About</a>
+            <a href="#about"><i class="fa fa-user" aria-hidden="true"></i> About</a>
           </li>
           <li>
-            <a href=""
+            <a href="#portfolio"
               ><i class="fa fa-briefcase" aria-hidden="true"></i> portfolio</a
             >
           </li>
           <li>
-            <a href=""
+            <a href="#contact"
               ><i class="fa fa-comment" aria-hidden="true"></i> Contact</a
             >
           </li>
@@ -68,7 +69,7 @@
       <!-- ********* main content start ******** -->
       <div class="mainContent">
         <!-- ********** Home section start ********** -->
-        <section class="home section ">
+        <section class="home  section active " id="home">
           <div class="container">
             <div class="row">
               <div class="col-md-8">
@@ -80,11 +81,14 @@
                     I ' m a <span class="typing">Front-End developer</span>
                   </h3>
                   <p>
-                    I 'm a front end develper I have experience in
-                    HTML,CSS,JavaScript, bootstrap and react and I built more
-                    than 20 project to develop my skills
+                    Front-end development is not just my career; it's my passion. I thrive on creating intuitive and engaging user experiences,
+                     combining creativity with technical expertise to bring designs to life. 
+                    My dedication to the craft goes beyond the code—I am constantly learning and adapting to new technologies, 
+                    ensuring that I stay at the forefront of the ever-evolving web development landscape.
+                     Whether it's mastering the latest JavaScript frameworks or exploring new design principles,
+                      I am driven by a relentless desire to improve and deliver the best possible results in every project I undertake.
                   </p>
-                  <a href="#contact" class="button hire-me">Hire me</a>
+                  <a href="Logyn-khaled-mohamed-cv.pdf"  download="Logyn-khaled-mohamed-cv.pdf" class="button ">Download CV</a>
                 </div>
               </div>
               <div class="col-md-4">
@@ -97,7 +101,7 @@
         </section>
         <!-- ********** Home section end ********** -->
         <!-- ********** About section start ********** -->
-        <section class="about section ">
+        <section class="about section " id="about">
           <div class="about-content">
             <div class="container-fluid">
               <div class="title">
@@ -168,8 +172,7 @@
               <div class="row">
                 <div class="col-12">
                   <div class="buttons">
-                    <button class="button">Download my cv</button>
-                    <button class="button hire-me">Hire me</button>
+                    <a href="#contact" data-section-index="1" class="button hire-me">Hire me</a>
                   </div>
                 </div>
               </div>
@@ -231,7 +234,7 @@
         </section>
         <!-- ********** About section end ********** -->
         <!-- ********** Portfolio section start ********** -->
-         <section class="portfolio section ">
+         <section class="portfolio section " id="portfolio">
           <div class="container p-3">
             <div class="row">
               <div class="col-12">
@@ -248,7 +251,14 @@
             <div class="row m-3">
               <!-- *********** Portfolio item start ********** -->
                <div class="col-lg-4">
+                
                   <div class="portfolio-item shadow-dark">
+                    <div class="codeIconBox">
+                      <div class="codeIcon">
+                       <a href="https://fokirtest.netlify.app/"><i class="fa-solid fa-globe"></i></a>
+                       <a href="https://github.com/Logykhaled/fokirProject"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                      </div>
+                    </div>
                     <div class="portfolio-img">
                       <img class="img-fluid" src="img/portfolio/fokir.PNG">
                     </div>
@@ -256,6 +266,12 @@
                </div>
                <div class="col-lg-4">
                 <div class="portfolio-item shadow-dark">
+                  <div class="codeIconBox">
+                    <div class="codeIcon">
+                      <a href="https://bakeryshop1.netlify.app/"><i class="fa-solid fa-globe"></i></i></a>
+                       <a href="https://github.com/Logykhaled/BakeryProject"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
                   <div class="portfolio-img">
                     <img class="img-fluid" src="img/portfolio/bakery.PNG">
                   </div>
@@ -263,6 +279,11 @@
                </div>
                <div class="col-lg-4">
                 <div class="portfolio-item shadow-dark">
+                  <div class="codeIconBox">
+                    <div class="codeIcon">
+                       <a href="https://github.com/oassem/Beesline"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
                   <div class="portfolio-img">
                     <img class="img-fluid" src="img/portfolio/beesline.PNG">
                   </div>
@@ -274,6 +295,11 @@
               <!-- *********** Portfolio item start ********** -->
                <div class="col-lg-4">
                   <div class="portfolio-item shadow-dark">
+                    <div class="codeIconBox">
+                      <div class="codeIcon">
+                       <a href="https://github.com/Logykhaled/everyLastDrop"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                      </div>
+                    </div>
                     <div class="portfolio-img">
                       <img class="img-fluid" src="img/portfolio/everylastdrop.PNG">
                     </div>
@@ -281,6 +307,11 @@
                </div>
                <div class="col-lg-4">
                 <div class="portfolio-item shadow-dark">
+                  <div class="codeIconBox">
+                    <div class="codeIcon">
+                       <a href="https://github.com/Hagar00/E-commerce-project"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                    </div>
+                  </div>
                   <div class="portfolio-img">
                     <img class="img-fluid" src="img/portfolio/talabat.PNG">
                   </div>
@@ -339,12 +370,12 @@
                     </div>
                   </div>
                 </div>
-                <div class="contact-heading">
+                <!-- <div class="contact-heading">
                   <h2>SEND ME AN EMAIL</h2>
                   <h6 class="mb-5">I'M VERY RESPONSIVE TO MESSAGES</h6>
-                </div>
+                </div> -->
                  <!-- ********** contact form start ********** -->
-                 <div class="contact-form p-5" >
+                 <!-- <div class="contact-form p-5" >
                   <div class="row">
                     <div class="form-item col-md-6">
                     <div class="form-group ">
@@ -371,7 +402,7 @@
                   </div>
                   </div>
                 </div>
-                 </div>
+                 </div> -->
                    <!-- ********** contact form end ********** -->
               </div>
              </section>
@@ -398,8 +429,10 @@
       <!-- ********* main content end ******** -->
     </div>
     <!-- ********** main container end ********** -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
   </body>

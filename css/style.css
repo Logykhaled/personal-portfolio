@@ -8,6 +8,15 @@
     --text-black-900:#302e4d;
     --text-black-700:#504e70;
 }
+a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the parent */
+    background: none; /* Remove any background */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    border: none; /* Remove any border */
+    font: inherit; /* Inherit font styles */
+}
  .dark{
     --bg-black-900:#151515;
     --bg-black-100:#222222;
@@ -36,14 +45,50 @@ ul{
     box-sizing: border-box;
 }
 .section{
-    min-height: 100vh;
-    background: var(--bg-black-900);
-    display: block;
+   min-height: 100vh;
+   background: var(--bg-black-900);
+   display: block;
+   opacity: 1;
+   position: fixed;
+   left: 270px;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   z-index: 0;
+   overflow-y: auto;
+   overflow-x: hidden;
+   padding: 0 30px;
+   transition: all 0.3s ease ;
+   -webkit-transition: all 0.3s ease ;
+   -moz-transition: all 0.3s ease ;
+   -ms-transition: all 0.3s ease ;
+   -o-transition: all 0.3s ease ;
+}
+.section.active{
+    z-index: 2;
     opacity: 1;
+    animation:  slideSection 1s ease;
+    -webkit-animation:  slideSection 1s ease;
 }
-.mainContent{
-   padding-left: 275px;
+@keyframes slideSection {
+    0%
+    {
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        -moz-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        -o-transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
 }
+}
+
 .aside{
     position: fixed;
     top: 0;
@@ -82,6 +127,12 @@ ul{
     display: inline-block;
     position: relative;
 }
+.aside .nav-toggler.open span{
+    background-color: transparent;
+}
+.section.back-section{
+    z-index: 1;
+}
 .aside .nav-toggler span::before{
     content: '';
     width: 18px;
@@ -92,6 +143,14 @@ ul{
     left: 0;
 
 }
+.aside .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    top: 0;
+}
 .aside .nav-toggler span::after{
     content: '';
     width: 18px;
@@ -101,6 +160,17 @@ ul{
     top: 6px;
     left: 0;
 
+}
+.aside .nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    top: 0;
+}
+.aside.open{
+    left: 0;
 }
 
 .aside .logo{
@@ -440,6 +510,40 @@ h3.hello{
     -o-border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+.codeIconBox{
+    background:rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: all 0.3s ease;
+    -webkit-transform: all 0.3s ease;
+    -moz-transform: all 0.3s ease;
+    -ms-transform: all 0.3s ease;
+    -o-transform: all 0.3s ease;
+}
+.codeIconBox .codeIcon i{
+    font-size: 28px;
+    padding: 0 15px;
+}
+.portfolio-item:hover  .codeIconBox 
+{
+   visibility: visible;
+}
+.codeIcon a{
+    text-decoration: none;
 }
 .contact-heading{
     text-align: center;
@@ -505,13 +609,35 @@ h3.hello{
     height: 50px;
     padding: 0 50px;
 }
+
 @media(max-width: 1199.98px){
+    .home-info .hello{
+       margin-top: 180px;
+    }
     .aside{
         left: -275px;
     }
-    .mainContent{
-        padding-left: 0;
-     }
+   .section{
+    
+    left: 0;
+   }
+   .aside .nav-toggler{
+    display: flex;
+    left:10px;
+    top:5px;
+
+
+   }
+   .aside .nav-toggler.open{
+    left: 250px;
+    top: 5px;
+   }
+   .section{
+    left: 0;
+   }
+   .section.open{
+    left: 270px;
+   }
      .box-timeline{
         padding: 0;
  
@@ -523,8 +649,17 @@ h3.hello{
      .timeline{
         padding: 10px 0;
         left: 30px;
-       
-        
+     }
+     .home .row .home-img::before{
+        top: -40px;
+        left: -25px;
+     }
+     .home .row .home-img::after{
+        bottom:-40px;
+        right: -40px;
+     }
+     .home .row .home-img img{
+        width: 200px;
      }
 }
 @media (max-width: 575.98px) {
