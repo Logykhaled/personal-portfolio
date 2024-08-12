@@ -611,10 +611,7 @@ h3.hello{
 }
 
 @media(max-width: 1199.98px){
-    .home-info .hello{
-       padding-top: 650px;
-     
-    }
+
     .aside{
         left: -275px;
     }
@@ -667,6 +664,12 @@ h3.hello{
         margin-bottom: 50px;
      }
 }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .home-info .hello{
+        padding-top: 650px;
+    }    
+  }
+  
 @media (max-width: 575.98px) {
     .timeline p{
         width: 80%;
@@ -677,4 +680,8 @@ h3.hello{
    .timeline h4{
     font-size: 16px;
    }
+   .home-info .hello{
+    padding-top: 650px;
+  
+ }
 }
